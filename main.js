@@ -134,6 +134,8 @@ function handelOperand(e) {
     return;
   } else if ((operand === "0") & (calc.currentOperand === "0")) {
     return;
+  } else if ((calc.currentOperand === "0") & (operand !== ".")) {
+    calc.currentOperand = "";
   }
 
   calc.appendOperand(operand);

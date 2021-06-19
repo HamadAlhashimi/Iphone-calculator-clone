@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+
+:root {
+  --primary-font: "Oswald", sans-serif;
+  --screen-text: #ced6d4;
+
+  /* fallback for old browsers */
+  --bg-color: #e0eafc;
+  --bg-calculator-color: #e0eafc;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  --bg-color: -webkit-linear-gradient(to right, #121e2c, #1a1d20);
+  --bg-calculator-color: -webkit-linear-gradient(to right, #121e2c, #1a1d20);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  --bg-color: linear-gradient(to right, #121e2c, #1a1d20);
+  --bg-calculator-color: linear-gradient(to right, #121e2c, #1a1d20);
+
+  /* Binary operator button */
+  --binary-operator-text: #cdd5d3;
+  --binary-operator-bg: #d68f00;
+
+  /* Operand button */
+  --operand-bg: #2e2f33;
+  --operand-text: #ced6d4;
+
+  /* Unary operator button */
+  --unary-operator-text: #2e2f33;
+  --unary-operator-bg: #b1b4b3;
+
+  /* button size */
+  --btn-size: 90px;
+
+  /* space between buttons */
+  --grid-gap: 15px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center center;
+  font-family: var(--primary-font);
+  background: var(--bg-color);
+}
+
+.calculator-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary-color);
+  background: var(--bg-calculator-color);
+  padding: 50px;
+  box-shadow: 0 0 100px #31363d;
+  border-radius: 5%;
+}
+
+.screen-label {
+  text-align: right;
+  font-size: 4.5rem;
+  padding: 0 10px 0 0;
+  color: var(--screen-text);
+}
+
+#keypad {
+  display: grid;
+  grid-template-columns: [vl1] 1fr [vl2] 1fr [vl3] 1fr [vl4] 1fr [vl5];
+  grid-template-rows: [hl1] 1fr [hl2] 1fr [hl3] 1fr [hl4] 1fr [hl5] 1fr [hl6];
+  gap: var(--grid-gap);
+  place-items: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  font-weight: 700;
+  outline: none;
+}
+
+.binary-operator-btn,
+.equals-btn {
+  background: var(--binary-operator-bg);
+  color: var(--binary-operator-text);
+}
+
+.selected {
+  animation: selected-binary-btn 0.3s linear both;
+}
+
+.unselected {
+  animation: unselected-binary-btn 0.3s linear both;
+}
+
+@keyframes selected-binary-btn {
+  to {
+    background: var(--binary-operator-text);
+    color: var(--binary-operator-bg);
+  }
+}
+
+@keyframes unselected-binary-btn {
+  from {
+    background: var(--binary-operator-text);
+    color: var(--binary-operator-bg);
+  }
+  to {
+    background: var(--binary-operator-bg);
+    color: var(--binary-operator-text);
+  }
+}
+
+.unary-operator-btn,
+.reset-btn {
+  background: var(--unary-operator-bg);
+  color: var(--unary-operator-text);
+}
+
+.unary-operator-btn:active,
+.reset-btn:active {
+  background: hsl(160, 2%, 90%);
+  transition: 0.2s;
+}
+
+.operand-btn,
+.negate-btn {
+  background: var(--operand-bg);
+  color: var(--operand-text);
+}
+
+.operand-btn:active,
+.negate-btn:active {
+  background: hsl(228, 5%, 50%);
+  transition: 0.2s;
+}
+
+.equals-btn:active {
+  background: hsl(40, 65%, 65%);
+}
+
+/* .small-font {
+  font-size: 1.5rem;
+} */
+
+.span-two-cols {
+  grid-column-start: vl1;
+  grid-column-end: vl3;
+  width: 100%;
+  border-radius: var(--btn-size);
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    /* button size */
+    --btn-size: 80px;
+
+    /* space between buttons */
+    --grid-gap: 10px;
+  }
+  .calculator-wrapper {
+    justify-content: flex-end;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

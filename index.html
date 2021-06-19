@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calculator-wrapper">
+      <!-- <div class="screen"> -->
+      <spna class="screen-label">0</spna>
+      <!-- </div> -->
+      <div id="keypad">
+        <button type="button" data-operation="reset" class="btn reset-btn">C</button>
+        <button type="button" data-operation="backspace" class="btn unary-operator-btn">
+          <i class="fas fa-backspace"></i>
+        </button>
+        <button type="button" data-operation="percent" class="btn unary-operator-btn">
+          <i class="fas fa-percentage"></i>
+        </button>
+        <button type="button" data-operation="divide" class="btn binary-operator-btn">
+          <i class="fas fa-divide"></i>
+        </button>
+        <button type="button" class="btn operand-btn">7</button>
+        <button type="button" class="btn operand-btn">8</button>
+        <button type="button" class="btn operand-btn">9</button>
+        <button type="button" data-operation="multiply" class="btn binary-operator-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <button type="button" class="btn operand-btn">4</button>
+        <button type="button" class="btn operand-btn">5</button>
+        <button type="button" class="btn operand-btn">6</button>
+        <button type="button" data-operation="subtract" class="btn binary-operator-btn">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button type="button" class="btn operand-btn">1</button>
+        <button type="button" class="btn operand-btn">2</button>
+        <button type="button" class="btn operand-btn">3</button>
+        <button type="button" data-operation="add" class="btn binary-operator-btn">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button type="button" class="btn operand-btn">0</button>
+        <button type="button" class="btn operand-btn">.</button>
+        <button type="button" data-operation="negate" class="btn negate-btn unary-operator-btn">
+          ( -1 )
+        </button>
+        <button type="button" class="btn equals-btn"><i class="fas fa-equals"></i></button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

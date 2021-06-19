@@ -3,4 +3,4 @@
 Basic iphone calculator clone
 
 
-[Click me to check the calculator](HamadAlhashimi.github.io)
+[Click me to check the calculator](https://hamadalhashimi.github.io/Iphone-calculator-clone/)

@@ -2,9 +2,6 @@
 
 ## [Click me to check the calculator](https://hamadalhashimi.github.io/Iphone-calculator-clone/)
 
-</br>
-</br>
-
 # Screenshots
 
 </br>

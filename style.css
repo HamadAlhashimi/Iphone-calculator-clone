@@ -9,11 +9,11 @@
   --bg-calculator-color: #e0eafc;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  --bg-color: -webkit-linear-gradient(to right, #121e2c, #1a1d20);
+  --bg-color: -webkit-linear-gradient(to right, #42275a, #734b6d);
   --bg-calculator-color: -webkit-linear-gradient(to right, #121e2c, #1a1d20);
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  --bg-color: linear-gradient(to right, #121e2c, #1a1d20);
+  --bg-color: linear-gradient(to right, #42275a, #734b6d);
   --bg-calculator-color: linear-gradient(to right, #121e2c, #1a1d20);
 
   /* Binary operator button */
@@ -57,7 +57,10 @@ body {
   color: var(--text-primary-color);
   background: var(--bg-calculator-color);
   padding: 50px;
-  box-shadow: 0 0 100px #31363d;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  color: rgb(45, 59, 73);
   border-radius: 5%;
 }
 
